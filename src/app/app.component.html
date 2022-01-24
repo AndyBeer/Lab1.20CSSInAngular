@@ -1,0 +1,19 @@
+
+<div *ngFor="let c of countries" class="country">
+
+  <p class="countryName"  >Name: {{c.name}}</p>
+  <p>Official Language: {{c.lang}}</p>
+  <p>Current President: {{c.president}}</p>
+  <p>Official Flag:</p>
+  <img class= "flagImg" src="{{c.flagURL}}" />
+
+  <script>
+
+    document.getElementsByClassName("countryName").style.color = "green";
+    document.getElementByClassName("country").style.backgroundColor = "{{c.colors[0]}}";
+    //this isnt working as expected - I think they need to be classes, since IDs would repeat from the *ngFor loop
+    
+    </script>
+</div>
+
+
